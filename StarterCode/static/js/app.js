@@ -48,11 +48,11 @@ async function buildCharts(sample) {
   // HINT: You will need to use slice() to grab the top 10 sample_values,
   // otu_ids, and labels (10 each).
   let tracePie = {
-    values: sampleData.sample_values.slice(0,9),
-    labels: sampleData.otu_ids.slice(0,9),
+    values: sampleData.sample_values.slice(0,10),
+    labels: sampleData.otu_ids.slice(0,10),
     type:"pie",
     hoverinfo:"text",
-    hovertext:sampleData.otu_labels.slice(0,9)
+    hovertext:sampleData.otu_labels.slice(0,10)
   };
   const dataPie = [tracePie];
   Plotly.newPlot("pie",dataPie);
